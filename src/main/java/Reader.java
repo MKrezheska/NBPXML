@@ -10,10 +10,8 @@ import org.apache.hadoop.hbase.client.ConnectionFactory;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.util.Bytes;
-public class Reader
-{
-    public static void main( String[] args ) throws IOException
-    {
+public class Reader {
+    public static void main( String[] args ) throws IOException {
         int ID_GENRE = 0;
         int NAME_GENRE = 1;
         int MOVIE_ID = 2;
