@@ -41,45 +41,46 @@ public class Reader
                 String row_key = "";
                 String[] data = line.split(",");
 
-                row_key+=data[ID_GENRE] + "+" + data[MOVIE_ID];
+                row_key+=data[NAME_GENRE] + "+" + data[WEIGHTED_RATING] + "+" +
+                        data[YEAR] + "+" + data[MOVIE_ID];
                 Put p = new Put(Bytes.toBytes(row_key));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("id_genre"),
                         Bytes.toBytes(data[ID_GENRE]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("name_genre"),
                         Bytes.toBytes(data[NAME_GENRE]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("movie_id"),
                         Bytes.toBytes(data[MOVIE_ID]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("budget"),
                         Bytes.toBytes(data[BUDGET]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("popularity"),
                         Bytes.toBytes(data[POPULARITY]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("revenue"),
                         Bytes.toBytes(data[REVENUE]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("runtime"),
                         Bytes.toBytes(data[RUNTIME]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("title"),
                         Bytes.toBytes(data[TITLE]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("vote_average"),
                         Bytes.toBytes(data[VOTE_AVERAGE]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("additional_info"),
                         Bytes.toBytes("vote_count"),
                         Bytes.toBytes(data[VOTE_COUNT]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("weighted_rating"),
                         Bytes.toBytes(data[WEIGHTED_RATING]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("director"),
                         Bytes.toBytes(data[DIRECTOR]));
-                p.addColumn(Bytes.toBytes("cf"),
+                p.addColumn(Bytes.toBytes("movie_info"),
                         Bytes.toBytes("year"),
                         Bytes.toBytes(data[YEAR]));
                 movieTable.put(p);
