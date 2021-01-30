@@ -18,7 +18,7 @@ public class ThirdQuery {
         Connection connection = ConnectionFactory.createConnection(config);
         Table movieTable = connection.getTable(TableName.valueOf("movies_table_3"));
         List<Double> years = new ArrayList<>();
-        for(double i = 1950.0; i <= 2020.0; i++) {
+        for(double i = 1870.0; i <= 2020.0; i++) {
             years.add(i);
         }
         for (Double year : years) {
@@ -60,6 +60,73 @@ public class ThirdQuery {
 }
 
 /*
+
+And Then There Were None  7.181870567375888 1870.0
+Passage of Venus P.J.C. Janssen 5.5206609535067 1874.0
+Sallie Gardner at a Gallop Eadweard Muybridge 5.655261524822695 1878.0
+Buffalo Running Eadweard Muybridge 5.269421225937183 1883.0
+Man Walking Around a Corner Louis Aimé Augustin Le Prince 4.844532528641572 1887.0
+Traffic Crossing Leeds Bridge Louis Aimé Augustin Le Prince 5.525261524822695 1888.0
+London's Trafalgar Square William Carr Crofts 5.207174806576402 1890.0
+Dickson Greeting William K.L. Dickson  5.110743572695036 1891.0
+Poor Pierrot Émile Reynaud 5.557697990543735 1892.0
+Blacksmith Scene William K.L. Dickson  5.446586879432624 1893.0
+Annie Oakley William K.L. Dickson  5.498126477541372 1894.0
+Tables Turned on the Gardener Louis Lumière 6.241970778346351 1895.0
+The Arrival of a Train at La Ciotat Auguste Lumière 6.437013864666897 1896.0
+The Bewitched Inn Georges Méliès 5.457174806576402 1897.0
+The Four Troublesome Heads Georges Méliès 5.816957249802995 1898.0
+An Up-to-Date Conjurer Georges Méliès 5.615227478497058 1899.0
+The One-Man Band Georges Méliès 5.747643710339679 1900.0
+The Man with the Rubber Head Georges Méliès 6.345557679521277 1901.0
+A Trip to the Moon Georges Méliès 7.640732640370665 1902.0
+The Great Train Robbery Edwin S. Porter 6.680898619134848 1903.0
+The Impossible Voyage Georges Méliès 6.155458081930772 1904.0
+The Black Imp Georges Méliès 5.777871254884932 1905.0
+Dream of a Rarebit Fiend Edwin S. Porter 5.7166467650890125 1906.0
+The Dancing Pig  5.567732423681775 1907.0
+Fantasmagorie Émile Cohl 5.957391928402567 1908.0
+A Corner in Wheat D.W. Griffith 5.675301759410804 1909.0
+Frankenstein J. Searle Dawley 5.8277636447733565 1910.0
+L'inferno Giuseppe de Liguoro 5.446586879432624 1911.0
+The Cameraman's Revenge Wladyslaw Starewicz 6.030099850690558 1912.0
+Fantômas: In the Shadow of the Guillotine Louis Feuillade 5.664910239361702 1913.0
+Gertie the Dinosaur Winsor McCay 5.898640185312287 1914.0
+The Birth of a Nation D.W. Griffith 6.125803413120567 1915.0
+Intolerance: Love's Struggle Throughout the Ages D.W. Griffith 6.650160117238385 1916.0
+The Immigrant Charlie Chaplin 6.645729905437353 1917.0
+A Dog's Life Charlie Chaplin 6.318712240609404 1918.0
+Broken Blossoms D.W. Griffith 6.156785414333707 1919.0
+The Cabinet of Dr. Caligari Robert Wiene 7.433489463341918 1920.0
+The Kid Charlie Chaplin 7.786140527310621 1921.0
+Nosferatu F.W. Murnau 7.49489140070922 1922.0
+Safety Last! Fred C. Newmeyer 6.94608731071497 1923.0
+The Last Laugh F.W. Murnau 6.846078484585322 1924.0
+The Gold Rush Charlie Chaplin 7.4560224241672355 1925.0
+The General Buster Keaton 7.658602514506768 1926.0
+Metropolis Fritz Lang 7.866070886575409 1927.0
+The Passion of Joan of Arc Carl Theodor Dreyer 7.681008719017327 1928.0
+Man with a Movie Camera Dziga Vertov 7.44708517778095 1929.0
+All Quiet on the Western Front Lewis Milestone 7.117491002434635 1930.0
+City Lights Charlie Chaplin 7.989803113756496 1931.0
+Freaks Tod Browning 7.381808712887308 1932.0
+King Kong Merian C. Cooper 7.480356145641369 1933.0
+It Happened One Night Frank Capra 7.436841797136357 1934.0
+The 39 Steps Alfred Hitchcock 7.108395601148263 1935.0
+Modern Times Charlie Chaplin 7.9937944230233215 1936.0
+Grand Illusion Jean Renoir 7.022457711114049 1937.0
+Bringing Up Baby Howard Hawks 7.259812252073567 1938.0
+Gone with the Wind Victor Fleming 7.618753098533361 1939.0
+The Great Dictator Charlie Chaplin 7.9770109879764375 1940.0
+Citizen Kane Orson Welles 7.926595536739143 1941.0
+Casablanca Michael Curtiz 7.8395562401398555 1942.0
+Shadow of a Doubt Alfred Hitchcock 7.197305872005361 1943.0
+Double Indemnity Billy Wilder 7.795903677150786 1944.0
+Children of Paradise Marcel Carné 7.106277995520718 1945.0
+It's a Wonderful Life Frank Capra 7.917500607635643 1946.0
+Black Narcissus Emeric Pressburger 7.106494265881997 1947.0
+Bicycle Thieves Vittorio De Sica 7.786140527310621 1948.0
+The Third Man Carol Reed 7.705827664140261 1949.0
 Sunset Boulevard Billy Wilder 8.022738893467185 1950.0
 Strangers on a Train Alfred Hitchcock 7.40607654949121 1951.0
 Singin' in the Rain Stanley Donen 7.784291165587419 1952.0
@@ -131,7 +198,7 @@ In a Heartbeat Beth David 7.72494857176443 2017.0
 Iron Sky: The Coming Race Timo Vuorensola 5.089019756838907 2018.0
 Avatar 2 James Cameron 1.9152224891329213 2020.0
 
-Process finished with exit code 0
+Total execution time in seconds: 0.0109988
 
  */
 
